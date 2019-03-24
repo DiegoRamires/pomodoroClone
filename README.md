@@ -1,24 +1,24 @@
-# README
+### Configuração
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Dependencias
+* [Ruby 2.4.1](http://ruby-doc.org)
+* [Rails 5.1.6](http://rubyonrails.org)
+* [PostgreSQL](https://www.postgresql.org)
 
-Things you may want to cover:
+#### Instalação e Configurações
 
-* Ruby version
+```
+git@github.com:DiegoRamires/pomodoroClone.git
+bundle install
+```
 
-* System dependencies
+#### Criação e migração do banco de dados
 
-* Configuration
+`bundle exec rails db:create && rails db:migrate`
 
-* Database creation
+#### Rodar localmente
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+bundle exec rails server
+```
+- Acesse a url ~> `localhost:3000`
