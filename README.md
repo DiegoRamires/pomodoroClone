@@ -8,7 +8,8 @@
 #### Instalação e Configurações
 
 ```
-git@github.com:DiegoRamires/pomodoroClone.git
+git clone git@github.com:DiegoRamires/pomodoroClone.git
+cd pomodoroClone
 bundle install
 ```
 
