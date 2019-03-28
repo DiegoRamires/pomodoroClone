@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  finished_at: 2019-03-28 01:45:43
+  user: one
+  category: one
+  todo_list: one
+
+two:
+  title: MyString
+  finished_at: 2019-03-28 01:45:43
+  user: two
+  category: two
+  todo_list: two
