@@ -1,5 +1,6 @@
-FROM ruby:2.4-slim
+FROM ruby:2.5.1
 # Install dependencies
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 RUN apt-get update && apt-get install -qq -y --no-install-recommends \
       build-essential nodejs libpq-dev imagemagick
 # Set path
