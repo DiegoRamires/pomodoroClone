@@ -43,6 +43,7 @@ $(document).on 'turbolinks:load', ->
   window.stopwatch_stop = () ->
     clearInterval(window.interval);
     $('.timer').html('00:00:00');
+    window.document.title = '00:00:00'
     seconds = 1;
     minutes = 0;
     hours = 0;
