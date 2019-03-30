@@ -1,11 +1,10 @@
 $(document).on 'turbolinks:load', ->
-  interval = null;
   seconds = 1;
   minutes = 0;
   hours = 0;
   
   window.stopwatch_start = () ->
-    interval = window.setInterval(() ->
+    window.interval = window.setInterval(() ->
       if (seconds == 60)
         minutes++;
         seconds = 0;
@@ -30,18 +29,21 @@ $(document).on 'turbolinks:load', ->
       else
         stopwatch_second = seconds;
 
-      $('.timer').html(stopwatch_hour+':'+stopwatch_minute+':'+stopwatch_second)
+      timer = stopwatch_hour+':'+stopwatch_minute+':'+stopwatch_second;
+      window.document.title = timer;
+      $('.timer').html(timer);
       
       seconds++;
 
     , 1000)
 
   window.stopwatch_pause = () ->
-    clearInterval(interval);
+    clearInterval(window.interval);
 
   window.stopwatch_stop = () ->
-    clearInterval(interval);
+    clearInterval(window.interval);
     $('.timer').html('00:00:00');
+    window.document.title = '00:00:00'
     seconds = 1;
     minutes = 0;
     hours = 0;
