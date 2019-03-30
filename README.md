@@ -51,6 +51,8 @@ Open your browser and access localhost:3000 to see the home page
 
 * **Diego Gonçalves** - [DiegoRamires](https://github.com/DiegoRamires)
 * **Ronaldo Carneiro da Silva Filho** - [kikogamer](https://github.com/kikogamer) 
+* ** Ramón Cordeiro ** - [Ramon Cordeiro](https://github.com/ramoncordeiro) 
+
 
 ## License
 
