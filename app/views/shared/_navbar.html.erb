@@ -1,0 +1,38 @@
+<div class="navbar-fixed">
+  <nav class="top-nav teal accent-4">
+    <div class="nav-wrapper col s12">
+      <a href="/" class="brand-logo">
+        <%= image_tag("logo.png", class: "logo-img") %>
+
+        <span class="logo-title">
+          Pomodoro Clone
+        </span>
+      </a>
+
+      <a href="#" data-target="side-bar" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+      <ul class="right hide-on-med-and-down">
+        <% if current_user %>
+          <li><a href="/users/edit">Perfil</a></li>
+          <li>  <%= link_to('Sair', destroy_user_session_path, :method => :delete) %></li>
+        <% else %>
+          <li><a href="/users/sign_in">Entrar</a></li>
+          <li><a href="/users/sign_up">Criar Conta</a></li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<ul class="sidenav" id="side-bar">
+  <% if current_user %>
+    <li><a href="/users/edit">Perfil</a></li>
+    <li><div class="divider"></div></li>
+    <li>  <%= link_to('Sair', destroy_user_session_path, :method => :delete) %></li>
+  <% else %>
+    <li><a href="/users/sign_in">Entrar</a></li>
+    <li><div class="divider"></div></li>
+    <li><a href="/users/sign_up">Criar Conta</a></li>
+    <li><div class="divider"></div></li>
+  <% end %>
+</ul>
