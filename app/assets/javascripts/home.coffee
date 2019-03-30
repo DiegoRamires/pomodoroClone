@@ -29,7 +29,9 @@ $(document).on 'turbolinks:load', ->
       else
         stopwatch_second = seconds;
 
-      $('.timer').html(stopwatch_hour+':'+stopwatch_minute+':'+stopwatch_second)
+      timer = stopwatch_hour+':'+stopwatch_minute+':'+stopwatch_second;
+      window.document.title = timer;
+      $('.timer').html(timer);
       
       seconds++;
 
