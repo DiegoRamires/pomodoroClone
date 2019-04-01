@@ -1,0 +1,1 @@
+json.partial! "stopwatch/settings", stopwatch: @stopwatch

@@ -1,0 +1,39 @@
+<div id="pomodoro_settings" class="modal">
+  <div class="modal-content red lighten-5">
+    <div class="row">
+      <%= form_for @stopwatch, url: { controller: "stopwatch",  action: "create" }, html: { class: "col s12 change-settings" } do |f| %>
+        <div class="row">
+          <div class="col s12">
+            <h4>Pomodoro Settings</h4>
+          </div>
+          <%= hidden_field(:stopwatch, :id) %>
+          <div class="input-field col s12">
+            <%= number_field(:stopwatch, :work_cyle, max: 59) %>
+            <%= label_tag(:work_cyle, "Work Cycle (in minutes)") %>
+          </div>
+          <div class="input-field col s12">
+            <%= number_field(:stopwatch, :fast_pause, max: 59) %>
+            <%= label_tag(:fast_pause, "Fast Pause (in minutes)") %>
+          </div>
+          <div class="input-field col s12">
+            <%= number_field(:stopwatch, :long_pause, max: 59) %>
+            <%= label_tag(:long_pause, "Long Pause (in minutes)") %>
+          </div>
+          <div class="input-field col s2 switch">
+            <label>
+              Off
+              <%= check_box_tag :has_sound_on_terminate, "", @stopwatch.has_sound_on_terminate %>
+              <span class="lever"></span>
+              On
+            </label>            
+          </div>
+          <div class="input-field col s4 switch">
+            <label>Play sound on terminate</label>
+          </div>
+          <br>
+          <%= submit_tag("Save", class: "btn right") %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
