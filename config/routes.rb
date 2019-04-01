@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   root to: 'home#index'
   
   resources :todo_lists
+  resources :task
   resources :home, only: [:index]
 end
