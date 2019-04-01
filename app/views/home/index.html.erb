@@ -1,16 +1,1 @@
-<div class="row">
-  <div class="card teal accent-4">
-    <div class="card-content white-text">
-      <span class="card-title pomodoro-title">
-        #1 <%= image_tag("logo.png", class: "logo-img") %>
-        <button class="btn waves-effect waves-light right"><i class="material-icons ">settings</i></button>
-      </span>  
-      <div class="timer">00:00:00</div>
-    </div>
-    <div class="card-action">
-      <button id="btnStart" class="btn waves-effect waves-light">Start<i class="material-icons left">play_circle_outline</i></button>
-      <button id="btnPause" class="btn waves-effect waves-light">Pause<i class="material-icons left">pause_circle_outline</i></button>
-      <button id="btnStop" class="btn waves-effect waves-light">Stop<i class="material-icons left">stop_circle_outline</i></button>
-    </div>
-  </div>
-</div>
+<%= render "stopwatch/index" %>
